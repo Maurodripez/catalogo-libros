@@ -1,4 +1,4 @@
-package com.mauamott.catalogolibros.service.impl;
+package com.mauamott.catalogolibros.service;
 
 import com.mauamott.catalogolibros.dto.LibroDTO;
 

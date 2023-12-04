@@ -30,6 +30,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework:spring-webflux'
 	testImplementation 'org.springframework.graphql:spring-graphql-test'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '3.2.0'
+	//firebase-admin
+	implementation group: 'com.google.firebase', name: 'firebase-admin', version: '6.11.0'
+
+	//commons-beanutils
+	implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
+
 }
 
 tasks.named('bootBuildImage') {

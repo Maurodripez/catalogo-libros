@@ -1,4 +1,4 @@
-package com.mauamott.catalogolibros.service.impl;
+package com.mauamott.catalogolibros.service;
 
 import com.mauamott.catalogolibros.dto.LibroDTO;
 
@@ -7,9 +7,9 @@ import java.util.concurrent.ExecutionException;
 
 public interface LibroService {
 
-    String guardarLibro(LibroDTO libro) throws InterruptedException, ExecutionException;
+    String guardarLibro(LibroDTO libroDTO) throws InterruptedException, ExecutionException;
 
-    LibroDTO obtenerLibroPorTitulo(String titulo) throws InterruptedException, ExecutionException;
+    List<LibroDTO> obtenerLibrosPorTitulo(String titulo) throws InterruptedException, ExecutionException;
 
     List<LibroDTO> obtenerLibrosPorAutor(String autor) throws InterruptedException, ExecutionException;
 
@@ -17,5 +17,7 @@ public interface LibroService {
 
     String eliminarLibro(String id) throws InterruptedException, ExecutionException;
 
-    String actualizarLibro(LibroDTO libro) throws InterruptedException, ExecutionException;
+    String actualizarLibro(LibroDTO libroDTO) throws InterruptedException, ExecutionException;
+
+    List<LibroDTO> listarLibros() throws InterruptedException, ExecutionException;
 }

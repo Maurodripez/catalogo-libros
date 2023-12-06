@@ -1,0 +1,44 @@
+type Mutation{
+    guardarLibro(libroDTO : LibroDTO) : String
+    eliminarLibro(id : String) : String
+    actualizarLibro(libroDTO : LibroActualizado) : String
+}
+type Query {
+    listarLibros : [Libro]
+    obtenerLibrosPorTitulo(titulo: String) : [Libro]
+    obtenerLibrosPorAutor(autor: String) : [Libro]
+    obtenerLibrosPorEditorial(editorial: String) : [Libro]
+}
+
+type Libro {
+    id : String
+    titulo : String
+    autor : String
+    anio_publicacion : String
+    editorial : String
+    total : Int
+    disponibles : Int
+    prestados : Int
+
+}
+
+input LibroDTO {
+    titulo : String
+    autor : String
+    anio_publicacion : String
+    editorial : String
+    total : Int
+    prestados : Int
+    disponibles : Int
+}
+
+input LibroActualizado {
+    id : String
+    titulo : String
+    autor : String
+    anio_publicacion : String
+    editorial : String
+    total : Int
+    prestados : Int
+    disponibles : Int
+}
